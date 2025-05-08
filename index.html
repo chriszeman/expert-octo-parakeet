@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>West Photography</title>
+  <title>Sonic Archives</title>
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="Assets/css/styles.css">
 </head>
 <body>
   <div class="background-image">
+
     <nav>
       <ul>
         <li><a href="index.html">HOME</a></li>
@@ -19,27 +20,55 @@
     </nav>
 
     <header>
-      <h1>HIP HOP ARCHIVES</h1>
-      <h2>A </h2>
+      <h1>Welcome to Sonic Archives</h1>
+      <h2>Your Sound, Our Studio</h2>
     </header>
 
     <main>
       <div class="info-box">
-        <p>
-          Welcome to West Photography. We capture timeless moments for high school seniors who want their personality to shine through every image. 
-          Our goal is to make each portrait session unique, relaxed, and fun.
-        </p>
-        <p>
-          With a focus on creative lighting, flattering poses, and authentic expressions, we deliver high-quality portraits that become lasting memories.
-          Explore our work and see what sets us apart in the world of senior photography.
-        </p>
+        <p>Capture your music in a professional studio environment. We offer high-quality sessions, experienced producers, and a vibe you won’t forget.</p>
+        <p>Click the button to the right to experience the studio atmosphere with background audio!</p>
+      </div>
+
+      <!-- 🎵 Audio Player Section -->
+      <div class="audio-controls">
+        <button id="playAudio">🔊 Play Studio Vibe</button>
+        <button id="pauseAudio" style="display:none;">🔇 Pause</button>
+        <audio id="bgAudio" loop>
+          <source src="Assets/Audio/podcast-music-good-vibe-330283.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
       </div>
     </main>
   </div>
 
+<!-- 🔧 Audio Script -->
+<script>
+    const audio = document.getElementById('bgAudio');
+    const playBtn = document.getElementById('playAudio');
+    const pauseBtn = document.getElementById('pauseAudio');
+
+    playBtn.addEventListener('click', () => {
+      audio.play();
+      playBtn.style.display = 'none';
+      pauseBtn.style.display = 'inline';
+    });
+
+    pauseBtn.addEventListener('click', () => {
+      audio.pause();
+      pauseBtn.style.display = 'none';
+      playBtn.style.display = 'inline';
+    });
+  </script>
+
+
+
   <footer>
-    <p>© 2025 West Photography | All Rights Reserved<br>
-    Photos courtesy of Unsplash. Fonts from Google Fonts.</p>
+    <p>© 2025 SONIC ARCHIVES | All Rights Reserved<br>
+     Fonts from Google Fonts.</p>
   </footer>
+
+
+
 </body>
 </html>

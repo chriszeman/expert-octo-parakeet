@@ -1,0 +1,151 @@
+/* Reset and make body a flex container */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+body > .background-image {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  background: url(../images/microphone-642670_1280.jpg) no-repeat center center fixed;
+  background-size: cover;
+  color: #000;
+}
+
+/* NAVIGATION STYLES */
+nav {
+  background-color: black;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+header {
+  font-family: 'Luckiest Guy', cursive;
+  text-align: center;
+  margin-top: 0.5in;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+}
+
+header h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+header h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/* Main grows to take up remaining space */
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.testimonials {
+  text-align:left;
+  font-family: 'Luckiest Guy', cursive;
+  margin-left: 15px;
+  color: #000;
+}
+
+.testimonial-carousel {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.testimonial {
+  display: none;
+  font-size: 1.2rem;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.testimonial.active {
+  display: block;
+}
+
+.content-box, .info-box {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 2em;
+  width: 50%;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.audio-controls {
+  text-align: center;
+  margin-top: 2em;
+}
+
+.audio-controls button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+ position:absolute;
+ margin-left: 20px;
+}
+
+.audio-controls button:hover {
+  background-color: #333;
+}
+
+
+
+
+/* Footer sticks to bottom */
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+

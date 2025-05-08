@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | West Photography</title>
   <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="/Assets/css/styles.css">
 </head>
 <body>
-  <div class="background-image">
+  <div class="container">
     <nav>
       <ul>
         <li><a href="index.html">HOME</a></li>
@@ -19,28 +19,62 @@
     </nav>
 
     <header>
-      <h1>About West Photography</h1>
-      <h2>Capturing moments, creating memories</h2>
+      <h1>About Sonic Archives</h1>
     </header>
 
     <main>
       <div class="info-box">
         <p>
-          Founded by Jamie West in 2012, West Photography is built on a passion for capturing genuine emotion and personality in every frame.
+          Founded by Chris Zem in 2025, Sound Archive is built on a passion for creating quality and timeless music.
         </p>
         <p>
-          We specialize in senior portraits and have helped hundreds of students celebrate their final year with creative, high-quality images.
-        </p>
-        <p>
-          Our mission is to make every client feel confident, empowered, and proud of who they are.
+          Our mission is to make every client feel confident with their material and help elevate them further than expected.
         </p>
       </div>
     </main>
   </div>
 
+  <section class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-carousel">
+      <div class="testimonial active">
+        <p>🎤 "Sonic Archives helped me find my sound. The engineers are amazing!"</p>
+        <h4>- Lil Vibe</h4>
+      </div>
+      <div class="testimonial">
+        <p>🎧 "Affordable, professional, and fun. I’ve recorded 3 albums here!"</p>
+        <h4>- Mocha Wav</h4>
+      </div>
+      <div class="testimonial">
+        <p>🎶 "The best place for creatives. Feels like home."</p>
+        <h4>- Jae Echo</h4>
+      </div>
+    </div>
+
+  </section>
+  
+  <script>
+    const testimonials = document.querySelectorAll('.testimonial');
+    let index = 0;
+  
+    function showTestimonial(i) {
+      testimonials.forEach(t => t.classList.remove('active'));
+      testimonials[i].classList.add('active');
+    }
+  
+    setInterval(() => {
+      index = (index + 1) % testimonials.length;
+      showTestimonial(index);
+    }, 5000); // changes every 5 seconds
+  </script>
+
+
+
+
+
   <footer>
-    <p>© 2025 West Photography | All Rights Reserved<br>
-    Photos courtesy of Unsplash. Fonts from Google Fonts.</p>
+    <p>© SONIC ARCHIVES | All Rights Reserved<br>
+     Fonts from Google Fonts.</p>
   </footer>
 </body>
 </html>
